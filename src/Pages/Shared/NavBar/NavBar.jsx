@@ -5,8 +5,8 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
     const navItem = <>
-        <li className="md:text-black font-semibold text-lg"><a>Home</a></li>
-        <li className="md:text-black font-semibold text-lg"><a>Instructor</a></li>
+        <li className="md:text-black font-semibold text-lg"><Link to="/">Home</Link></li>
+        <li className="md:text-black font-semibold text-lg"><Link to="/instructors">Instructor</Link></li>
         <li className="md:text-black font-semibold text-lg"><a>Classes</a></li>
         {
             user &&
