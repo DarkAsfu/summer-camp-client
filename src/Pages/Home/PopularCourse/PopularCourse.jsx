@@ -16,7 +16,7 @@ const PopularCourse = () => {
                             <h2 className="card-title">{course.class_name}</h2>
                             <p>Number of student: {course.number_of_students}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Learn now!</button>
+                                <button className="btn ">Learn now!</button>
                             </div>
                         </div>
                     </div>
