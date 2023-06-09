@@ -6,7 +6,8 @@ import slide4 from '../../../assets/banner/slide4.jpg'
 
 const Banner = () => {
     return (
-        <div className="carousel max-w-7xl absolute top-0">
+        <div>
+            <div className="carousel max-w-7xl ">
             <div id="slide1" className="carousel-item relative w-full ">
                 <img src={slide1} className="bg-black opacity- w-auto md:w-full h-[700px]" />
                 <div className='absolute w-full h-[700px]  px-14 text-center  md:px-24 pt-52  bg-black opacity-60'>
@@ -63,6 +64,7 @@ const Banner = () => {
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
