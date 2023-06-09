@@ -1,15 +1,15 @@
-import { useState } from "react";
+import useCourse from "../../../hooks/useCourse";
 
 
 const PopularCourse = () => {
-    const [courses, setCourses] = useState([])
-    fetch('http://localhost:5000/popularCourse')
-        .then(res => res.json())
-        .then(data => setCourses(data))
+    const [courses] = useCourse();
+    const sortedCourses = courses.sort(
+        (a, b) => b.number_of_students - a.number_of_students
+      );
     return (
         <div className="grid md:grid-cols-3 md:gap-10 bg-blue-100 opacity-80 px-4 gap-y-6 md:px-10 py-10 md:py-24">
             {
-                courses.map(course => <>
+                sortedCourses.slice(0,6).map(course => <>
                     <div key={course._id} className="card glass">
                         <figure><img className="" src={course.class_image} alt="car!" /></figure>
                         <div className="card-body">
