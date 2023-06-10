@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { handleCreateUser, updateInfo, logOut } = useContext(AuthContext);
@@ -45,23 +46,67 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateInfo(name, photo);
-        setSuccess("Registered Successfully!!!");
-        setError("");
-        setConfirmPassword("");
-        setPasswordError("")
-        form.reset();
-        logOut()
-        .then(()=>{})
-        .catch(e => e.message)
-        navigate('/login')
+        updateInfo(name, photo)
+          //   setSuccess("Registered Successfully!!!");
+          //   setError("");
+          //   setConfirmPassword("");
+          //   setPasswordError("")
+          //   form.reset();
+          //   logOut()
+          //   .then(()=>{})
+          //   .catch(e => e.message)
+          //   navigate('/login')
+          // })
+          // .catch((e) => {
+          //   console.log(e.message);
+          //   setError(e.message);
+          //   setSuccess("");
+          // });
+          .then(() => {
+            const saveUser = { name, email }
+            fetch('http://localhost:5000/users', {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify(saveUser)
+            })
+              .then(res => res.json())
+              .then(data => {
+                if (data.insertedId) {
+                  Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Register successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  setSuccess("Registered Successfully!!!");
+                  setError("");
+                  setConfirmPassword("");
+                  setPasswordError("");
+                  form.reset();
+                  logOut()
+                    .then(() => { })
+                    .catch(e => e.message)
+                  navigate('/login')
+                }
+              })
+          })
+          .catch(error => {
+            console.log(error.message)
+            setError(error.message);
+            setSuccess('')
+          })
+
+
       })
-      .catch((e) => {
-        console.log(e.message);
-        setError(e.message);
-        setSuccess("");
-      });
-  };
+      .catch(error => {
+        console.log(error.message)
+        setError(error.message);
+        setSuccess('')
+      })
+  }
 
   return (
     <div className="hero min-h-screen bg-base-200">

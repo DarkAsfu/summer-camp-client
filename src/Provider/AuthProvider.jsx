@@ -32,13 +32,14 @@ const AuthProvider = ({children}) => {
 
     const updateInfo = (name, photo) =>{
         console.log(name, photo)
-        updateProfile(auth.currentUser, {
+        return updateProfile(auth.currentUser, {
             displayName: `${name}`, photoURL:`${photo}`
         }).then(() => {
             console.log('meo')
         }).catch((error) => {
             console.error(error);
         });
+    
     }
     const logOut = () =>{
         return signOut(auth)
