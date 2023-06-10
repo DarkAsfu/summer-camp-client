@@ -9,7 +9,7 @@ const PopularCourse = () => {
     return (
         <div className="grid md:grid-cols-3 md:gap-10 bg-blue-100 opacity-80 px-4 gap-y-6 md:px-10 py-10 md:py-24">
             {
-                sortedCourses.slice(0,6).map(course => <>
+                sortedCourses.slice(0,6).map(course =>
                     <div key={course._id} className="card glass">
                         <figure><img className="" src={course.class_image} alt="course thumbnail" /></figure>
                         <div className="card-body">
@@ -20,7 +20,7 @@ const PopularCourse = () => {
                             </div>
                         </div>
                     </div>
-                </>)
+                )
             }
         </div>
     );
