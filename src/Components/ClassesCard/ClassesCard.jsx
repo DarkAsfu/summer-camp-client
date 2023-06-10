@@ -14,7 +14,8 @@ const ClassesCard = ({ course }) => {
     const handleSelect = (course) => {
         console.log(course);
         if(user && user.email){
-            const selectItem = {cartItemId: _id, class_name, class_image, instructor_name, available_seat, price, email: user.email}
+            const selectItem = {cartItemId: _id, class_name, class_image, instructor_name, price, email: user.email}
+
             fetch('http://localhost:5000/carts', {
                 method: 'POST',
                 headers: {
@@ -31,6 +32,9 @@ const ClassesCard = ({ course }) => {
                         'Selected your Class!',
                         'success'
                       )
+                    fetch(`http://localhost:5000/courses/${_id}`, {
+                        method: "PATCH"
+                    })
                 }
             })
         }
@@ -50,7 +54,7 @@ const ClassesCard = ({ course }) => {
         }
     }
     return (
-        <div  className="card bg-base-100 shadow-xl">
+        <div  className={`card  ${available_seat === 0 ? "bg-red-500" : "bg-base-100"}  shadow-xl`}>
             <figure><img src={class_image} alt="classes-img" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
@@ -61,7 +65,7 @@ const ClassesCard = ({ course }) => {
                 }</p>
                 <div className="card-actions justify-between items-center">
                     <div className="badge text-base font-bold">Available Seat: {available_seat}</div>
-                    <button onClick={() => handleSelect(course)} className="btn">Select</button>
+                    <button onClick={() => handleSelect(course)} disabled={available_seat === 0 || user?.role === "admin" || user?.role === "instructor"} className="btn">Select</button>
                 </div>
             </div>
         </div>
