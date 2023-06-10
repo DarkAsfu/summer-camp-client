@@ -32,9 +32,9 @@ const ClassesCard = ({ course }) => {
                         'Selected your Class!',
                         'success'
                       )
-                    fetch(`http://localhost:5000/courses/${_id}`, {
-                        method: "PATCH"
-                    })
+                    // fetch(`http://localhost:5000/courses/${_id}`, {
+                    //     method: "PATCH"
+                    // })
                 }
             })
         }
