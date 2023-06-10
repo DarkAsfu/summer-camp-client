@@ -7,7 +7,7 @@ const NavBar = () => {
     const navItem = <>
         <li className="md:text-black font-semibold text-lg"><Link to="/">Home</Link></li>
         <li className="md:text-black font-semibold text-lg"><Link to="/instructors">Instructor</Link></li>
-        <li className="md:text-black font-semibold text-lg"><a>Classes</a></li>
+        <li className="md:text-black font-semibold text-lg"><Link to="/classes">Classes</Link></li>
         {
             user &&
             <>

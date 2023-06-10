@@ -1,14 +1,12 @@
-import { useState } from "react";
+
+import usePopularInstructor from "../../../hooks/usePopularInstructor";
 
 const PopularInstruction = () => {
-    const [instructors, setInstructors] = useState([]);
-    fetch('http://localhost:5000/popularInstructor')
-        .then(res => res.json())
-        .then(data => setInstructors(data))
+    const [populaIns] = usePopularInstructor();
     return (
         <div className="grid md:grid-cols-3 gap-8 px-4 md:px-10 py-10">
             {
-                instructors.map(instructor => <>
+                populaIns.map(instructor => <>
                     <div key={instructor._id} className="card bg-base-100 shadow-xl">
                         <figure><img className="h-[200px]" src={instructor.activites_img} alt="Shoes" /></figure>
                         <div className="card-body">

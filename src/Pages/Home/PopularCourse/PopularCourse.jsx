@@ -11,7 +11,7 @@ const PopularCourse = () => {
             {
                 sortedCourses.slice(0,6).map(course => <>
                     <div key={course._id} className="card glass">
-                        <figure><img className="" src={course.class_image} alt="car!" /></figure>
+                        <figure><img className="" src={course.class_image} alt="course thumbnail" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{course.class_name}</h2>
                             <p>Number of student: {course.number_of_students}</p>
