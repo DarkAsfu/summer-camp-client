@@ -6,7 +6,7 @@ const usePopularInstructor = () => {
     const [loading, setLoading] = useState(true)
     
     useEffect( () => {
-        fetch('http://localhost:5000/popularInstructor')
+        fetch('http://localhost:5000/instructor')
         .then(res => res.json())
         .then(data => {
             setPopularIns(data)

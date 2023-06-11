@@ -54,12 +54,14 @@ const Instructor = () => {
                         populaIns.map(instructor => <SwiperSlide key={instructor._id}>
                             <div className="card mb-10 bg-base-100 shadow-xl">
                                 <figure className="px-10 pt-10">
-                                    <img src={instructor.instructor_image} alt="Shoes" className="rounded-xl" />
+                                    <img src={instructor.instructor_image} alt="intructor Profile" className="rounded-xl" />
                                 </figure>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{instructor.instructor_name}</h2>
                                     <p>Email: {instructor.instructor_email}</p>
-                                    <p >Course Name: <span className=" text-blue-500 font-bold">{instructor.class_taught}</span></p>
+                                    {   instructor.class_taught &&
+                                        <p >Course Name: <span className=" text-blue-500 font-bold">{instructor.class_taught}</span></p>
+                                    }
                                     <div className="card-actions">
                                         <button className="btn">More Details</button>
                                     </div>

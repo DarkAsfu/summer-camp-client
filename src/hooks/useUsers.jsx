@@ -2,17 +2,17 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
 
-const useCourse = () => {
+const useUsers = () => {
     const [loading, setLoading] = useState(true)
-    const {data: courses = [], refetch} = useQuery({
-        queryKey: ['courses'],
+    const {data: users = [], refetch} = useQuery({
+        queryKey: ['users'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/courses');
+            const res = await fetch('http://localhost:5000/users');
             setLoading(false)
             return res.json();
         }
     })
-    return [courses, loading, refetch]
+    return [users, loading, refetch]
 };
 
-export default useCourse;
+export default useUsers;

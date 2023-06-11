@@ -47,23 +47,8 @@ const Register = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         updateInfo(name, photo)
-          //   setSuccess("Registered Successfully!!!");
-          //   setError("");
-          //   setConfirmPassword("");
-          //   setPasswordError("")
-          //   form.reset();
-          //   logOut()
-          //   .then(()=>{})
-          //   .catch(e => e.message)
-          //   navigate('/login')
-          // })
-          // .catch((e) => {
-          //   console.log(e.message);
-          //   setError(e.message);
-          //   setSuccess("");
-          // });
           .then(() => {
-            const saveUser = { name, email }
+            const saveUser = { name, email, image: photo }
             fetch('http://localhost:5000/users', {
               method: 'POST',
               headers: {

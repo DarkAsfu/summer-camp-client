@@ -11,7 +11,7 @@ const NavBar = () => {
         {
             user &&
             <>
-                <li className="md:text-black font-semibold text-lg"><Link to="/dashboard/myclasses">Dashboard</Link></li>
+                <li className="md:text-black font-semibold text-lg"><Link to="/dashboard">Dashboard</Link></li>
                 <li className="md:text-black font-semibold text-lg">
                     <div className="avatar">
                         <div className="w-12 mask mask-squircle">

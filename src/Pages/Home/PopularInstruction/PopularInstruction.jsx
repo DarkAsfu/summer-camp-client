@@ -6,7 +6,7 @@ const PopularInstruction = () => {
     return (
         <div className="grid md:grid-cols-3 gap-8 px-4 md:px-10 py-10">
             {
-                populaIns.map(instructor =>
+                populaIns.slice(0, 6).map(instructor =>
                     <div key={instructor._id} className="card bg-base-100 shadow-xl">
                         <figure><img className="h-[200px]" src={instructor.activites_img} alt="Shoes" /></figure>
                         <div className="card-body">
