@@ -27,14 +27,9 @@ const Dashboard = () => {
                         {
                             isInstructor ?  <> <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Instructor</NavLink></li>
                             {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Enrolled Classes</NavLink></li>
-                            <li>
-                                <NavLink to="/dashboard/myclasses"><FaShoppingCart></FaShoppingCart> My selecting Classes
-                                    <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
-                                </NavLink>
-        
-                            </li> </> : 
+                            <li><NavLink to="/dashboard/addClass">Add A Class</NavLink></li>
+                            <li><NavLink to="/dashboard/instructorClass">My Classes</NavLink></li>
+                             </> : 
                              <> <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
                              {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
                              <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>

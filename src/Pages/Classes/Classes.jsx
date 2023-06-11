@@ -1,5 +1,6 @@
 import useCourse from "../../hooks/useCourse";
 import ClassesCard from "../../Components/ClassesCard/ClassesCard";
+import React from "react";
 
 const Classes = () => {
     const [courses, loading] = useCourse();
@@ -17,8 +18,16 @@ const Classes = () => {
     return (
         <div className="grid md:grid-cols-3 gap-10 my-20">
             {
-                courses.map(course => <ClassesCard key={course._id} course={course}></ClassesCard>)
+                courses.map((course) => (
+                    <React.Fragment key={course._id}>
+                        {course.status === 'approve' && (
+                            <ClassesCard  course={course} />
+                        )}
+                    </React.Fragment>
+                ))
             }
+
+
         </div>
     );
 };
