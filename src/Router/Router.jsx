@@ -5,6 +5,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/REgister";
 import Instructor from "../Pages/Instructor/Instructor";
 import Classes from "../Pages/Classes/Classes";
+import Dashboard from "../Layout/Dashboard";
+import MyClasses from "../Pages/Dashboard/MyClasses";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -35,6 +38,21 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path: '/dashboard',
+      element: <PrivateRouter><Dashboard></Dashboard></PrivateRouter>,
+      children: [
+        {
+          path: '/dashboard',
+          element: <h1>Welcome to my dashboard</h1>
+        },
+        {
+          path: 'myclasses',
+          element: <MyClasses></MyClasses>
+        }
+      ]
+
+    }
   ]);
 
 export default router;
