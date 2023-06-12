@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const History = () => {
     const {user} = useContext(AuthContext);
     const [history, setHistory] = useState([]);
-    fetch(`http://localhost:5000/payment/${user?.email}`)
+    fetch(`https://summer-camp-server-darkasfu.vercel.app/payment/${user?.email}`)
     .then(res => res.json())
     .then(data => setHistory(data))
     return (

@@ -8,7 +8,7 @@ const ManageClasses = () => {
   const [selectedClass, setSelectedClass] = useState(null);
 
   const handleApprove = (item) => {
-    fetch(`http://localhost:5000/courses/approveStatus/${item._id}`, {
+    fetch(`https://summer-camp-server-darkasfu.vercel.app/courses/approveStatus/${item._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -27,7 +27,7 @@ const ManageClasses = () => {
   };
 
   const handleDenied = (item) => {
-    fetch(`http://localhost:5000/courses/deniedStatus/${item._id}`, {
+    fetch(`https://summer-camp-server-darkasfu.vercel.app/courses/deniedStatus/${item._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -60,7 +60,7 @@ const ManageClasses = () => {
     const feedback = event.target.feedback.value;
     const instructorId = item._id; // Use item._id to get the instructor ID
     console.log(instructorId);
-    fetch(`http://localhost:5000/instructor/feedback/${instructorId}`, {
+    fetch(`https://summer-camp-server-darkasfu.vercel.app/instructor/feedback/${instructorId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

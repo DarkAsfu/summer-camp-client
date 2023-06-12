@@ -4,7 +4,7 @@ import useUsers from "../../../hooks/useUsers";
 const ManageUser = () => {
     const [users, loading, refetch] = useUsers();
     const handleMakeAdmin = (user) => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://summer-camp-server-darkasfu.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -24,7 +24,7 @@ const ManageUser = () => {
     };
 
     const handleMakeInstructor = (user) => {
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+        fetch(`https://summer-camp-server-darkasfu.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -33,7 +33,7 @@ const ManageUser = () => {
                 if (data.modifiedCount) {
                     refetch();
                     const saveInstructor = {instructor_name: user.name, instructor_image: user.image, instructor_email: user.email}
-                    fetch('http://localhost:5000/instructor', {
+                    fetch('https://summer-camp-server-darkasfu.vercel.app/instructor', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

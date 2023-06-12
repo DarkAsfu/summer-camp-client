@@ -49,7 +49,7 @@ const Register = () => {
         updateInfo(name, photo)
           .then(() => {
             const saveUser = { name, email, image: photo }
-            fetch('http://localhost:5000/users', {
+            fetch('https://summer-camp-server-darkasfu.vercel.app/users', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json'

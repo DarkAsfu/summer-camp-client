@@ -15,6 +15,7 @@ import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses";
 import Payment from "../Pages/Dashboard/Payment";
 import AdminRoute from "./AdminRoute";
 import History from "../Pages/Dashboard/History";
+import Error from "../Pages/Error/Error";
 
 
 
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
         }
       ]
 
+    },
+    {
+      path: '*',
+      element: <Error></Error>
     }
   ]);
 

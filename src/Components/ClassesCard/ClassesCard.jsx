@@ -16,7 +16,7 @@ const ClassesCard = ({ course }) => {
         if(user && user.email){
             const selectItem = {cartItemId: _id, class_name, class_image, instructor_name, price, email: user.email}
 
-            fetch('http://localhost:5000/carts', {
+            fetch('https://summer-camp-server-darkasfu.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -32,7 +32,7 @@ const ClassesCard = ({ course }) => {
                         'Selected your Class!',
                         'success'
                       )
-                    // fetch(`http://localhost:5000/courses/${_id}`, {
+                    // fetch(`https://summer-camp-server-darkasfu.vercel.app/courses/${_id}`, {
                     //     method: "PATCH"
                     // })
                 }

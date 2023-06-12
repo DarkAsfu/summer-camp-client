@@ -9,7 +9,7 @@ const InstructorClass = () => {
         const fetchClasses = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/courses/instructor/${user.email}`
+                    `https://summer-camp-server-darkasfu.vercel.app/courses/instructor/${user.email}`
                 );
                 const data = await response.json();
                 setClasses(data);

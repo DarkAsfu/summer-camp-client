@@ -7,7 +7,7 @@ const useCourse = () => {
     const {data: courses = [], refetch} = useQuery({
         queryKey: ['courses'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/courses');
+            const res = await fetch('https://summer-camp-server-darkasfu.vercel.app/courses');
             setLoading(false)
             return res.json();
         }
