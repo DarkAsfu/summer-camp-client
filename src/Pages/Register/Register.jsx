@@ -97,8 +97,8 @@ const Register = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content grid grid-cols-1 md:grid-cols-2 py-20">
         <div className="text-center px-10">
-          <h1 className="text-4xl font-bold">Please Register !</h1>
-          <img src="https://i.ibb.co/Prv3X1W/Pngtree-purple-office-ui-registration-illustration-4978562.png" alt="" />
+          <h1 className="text-4xl font-bold pb-10">Please Register !</h1>
+          <img src="https://i.ibb.co/Xp69hxg/ll.png" alt="" />
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
           <form onSubmit={handleRegister} className="card-body">
