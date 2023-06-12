@@ -6,9 +6,6 @@ const InstructorClass = () => {
     const [classes, setClasses] = useState([]);
 
     useEffect(() => {
-        // Fetch classes from API based on instructor's email
-        // and set the classes state
-        // Replace 'fetchClasses' with your API call
         const fetchClasses = async () => {
             try {
                 const response = await fetch(
@@ -75,11 +72,11 @@ const InstructorClass = () => {
                                     <td className="">
                                         {
                                             !(item.status === 'pending' || item.status === 'approve') &&
-                                            <h2></h2>
+                                            <h2>{item.feedback}</h2>
                                         }
                                     </td>
                                     <td className="">
-                                        
+                                        <button className="btn">update</button>
                                     </td>
                                 </tr>)
                             }

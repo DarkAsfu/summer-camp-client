@@ -4,8 +4,8 @@ import useCart from "../hooks/useCart";
 const Dashboard = () => {
     const [cart] = useCart();
 
-    const isAdmin = true;
-    const isInstructor = false;
+    const isAdmin = false;
+    const isInstructor = true;
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
