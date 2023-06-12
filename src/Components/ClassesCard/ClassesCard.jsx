@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import Swal from "sweetalert2";
+import { Fade, Slide } from "react-awesome-reveal";
 
 
 const ClassesCard = ({ course }) => {
@@ -54,7 +55,8 @@ const ClassesCard = ({ course }) => {
         }
     }
     return (
-        <div  className={`card  ${available_seat === 0 ? "bg-red-500" : "bg-base-100"}  shadow-xl`}>
+        <Fade delay={1e3} cascade damping={1e-1}>
+            <div  className={`card  ${available_seat === 0 ? "bg-red-500" : "bg-base-100"}  shadow-xl`}>
             <figure><img src={class_image} alt="classes-img" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
@@ -69,6 +71,7 @@ const ClassesCard = ({ course }) => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 

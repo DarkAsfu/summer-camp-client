@@ -16,6 +16,7 @@ import Payment from "../Pages/Dashboard/Payment";
 import AdminRoute from "./AdminRoute";
 import History from "../Pages/Dashboard/History";
 import Error from "../Pages/Error/Error";
+import InstructorRouter from "./InstructorRouter";
 
 
 
@@ -69,11 +70,11 @@ const router = createBrowserRouter([
         },
         {
           path: 'instructorClass',
-          element: <InstructorClass></InstructorClass>
+          element: <InstructorRouter><InstructorClass></InstructorClass></InstructorRouter>
         },
         {
           path: 'addClass',
-          element: <AddClass></AddClass>
+          element: <InstructorRouter><AddClass></AddClass></InstructorRouter>
         },
         {
           path:'payment/:price',
