@@ -13,6 +13,8 @@ const AddClass = () => {
         // Set status as 'pending'
         data.status = "pending";
         data.enrolled_student = 0;
+        data.price = parseInt(data.price)
+        data.available_seat = parseInt(data.available_seat)
         console.log(data);
         fetch('http://localhost:5000/courses', {
             method: 'POST',
@@ -21,12 +23,12 @@ const AddClass = () => {
             },
             body: JSON.stringify(data)
         })
-        
+
         Swal.fire(
             'Good job!',
             'You clicked the button!',
             'success'
-          )
+        )
     };
 
     return (
