@@ -10,8 +10,8 @@ const Banner = () => {
             <div className="carousel max-w-7xl ">
             <div id="slide1" className="carousel-item relative w-full ">
                 <img src={slide1} className="bg-black opacity- w-auto md:w-full h-[700px]" />
-                <div className='absolute w-full h-[700px]  px-14 text-center  md:px-24 pt-52  bg-black opacity-60'>
-                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6 mx-auto'>Teaching Turning
+                <div className='absolute w-full h-[700px]  px-14 md:px-24 pt-52  bg-black opacity-60'>
+                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6'>Teaching Turning
                         Today’s Learners Into
                         Tomorrow’s Leaders</h1>
                     <button className='text-white btn btn-outline mr-4 mt-8'>Learn More</button>
@@ -24,8 +24,8 @@ const Banner = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={slide2} className="w-full h-[700px]" />
-                <div className='absolute w-full h-[700px] -1/4 px-14 text-center  md:px-24 pt-52  bg-black opacity-60'>
-                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6 mx-auto'>Teaching Turning
+                <div className='absolute w-full h-[700px] -1/4 px-14  md:px-24 pt-52  bg-black opacity-60'>
+                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6 '>Teaching Turning
                         Today’s Learners Into
                         Tomorrow’s Leaders</h1>
                     <button className='text-white btn btn-outline mr-4 mt-8'>Learn More</button>
@@ -38,8 +38,8 @@ const Banner = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <img src={slide3} className="w-full h-[700px]" />
-                <div className='absolute w-full h-[700px] -1/4 px-14 text-center  md:px-24 pt-52  bg-black opacity-60'>
-                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6 mx-auto'>Teaching Turning
+                <div className='absolute w-full h-[700px] -1/4 px-14  md:px-24 pt-52  bg-black opacity-60'>
+                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6'>Teaching Turning
                         Today’s Learners Into
                         Tomorrow’s Leaders</h1>
                     <button className='text-white btn btn-outline mr-4 mt-8'>Learn More</button>
@@ -52,8 +52,8 @@ const Banner = () => {
             </div>
             <div id="slide4" className="carousel-item relative w-full">
                 <img src={slide4} className="w-full h-[700px]" />
-                <div className='absolute w-full h-[700px] -1/4 px-14 text-center  md:px-24 pt-52  bg-black opacity-60'>
-                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6 mx-auto'>Teaching Turning
+                <div className='absolute w-full h-[700px] -1/4 px-14   md:px-24 pt-52  bg-black opacity-60'>
+                    <h1 className='text-white text-4xl font-bold w-full md:w-2/6'>Teaching Turning
                         Today’s Learners Into
                         Tomorrow’s Leaders</h1>
                     <button className='text-white btn btn-outline mr-4 mt-8'>Learn More</button>

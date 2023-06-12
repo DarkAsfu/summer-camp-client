@@ -12,6 +12,10 @@ import ManageUser from "../Pages/Dashboard/Admin/ManageUser";
 import InstructorClass from "../Pages/Dashboard/Instructor/InstructorClass";
 import AddClass from "../Pages/Dashboard/Instructor/AddClass";
 import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses";
+import Payment from "../Pages/Dashboard/Payment";
+import AdminRoute from "./AdminRoute";
+import History from "../Pages/Dashboard/History";
+
 
 
 
@@ -56,11 +60,11 @@ const router = createBrowserRouter([
         },
         {
           path: 'allusers',
-          element: <ManageUser></ManageUser>
+          element: <AdminRoute><ManageUser></ManageUser></AdminRoute>
         },
         {
           path: 'manageClasses',
-          element: <ManageClasses></ManageClasses>
+          element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
         },
         {
           path: 'instructorClass',
@@ -69,6 +73,14 @@ const router = createBrowserRouter([
         {
           path: 'addClass',
           element: <AddClass></AddClass>
+        },
+        {
+          path:'payment/:price',
+          element: <Payment></Payment>
+        },
+        {
+          path: 'paymentHistory',
+          element: <History></History>
         }
       ]
 

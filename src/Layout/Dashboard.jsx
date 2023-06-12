@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { FaShoppingCart, FaWallet, FaHome} from 'react-icons/fa';
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
@@ -23,20 +23,20 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
                    {
-                    isAdmin ? <> <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Admin</NavLink></li>
+                    isAdmin ? <> <li><Link><FaHome></FaHome> User Admin</Link></li>
                     {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
                     <li><NavLink to="/dashboard/manageClasses"><FaWallet></FaWallet>Manage Classes</NavLink></li>
                     <li><NavLink to="/dashboard/allusers"><FaWallet></FaWallet>Manage Users</NavLink></li>
                     </> : <>
                         {
-                            isInstructor ?  <> <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Instructor</NavLink></li>
+                            isInstructor ?  <> <li><Link><FaHome></FaHome> User Instructor</Link></li>
                             {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
                             <li><NavLink to="/dashboard/addClass">Add A Class</NavLink></li>
                             <li><NavLink to="/dashboard/instructorClass">My Classes</NavLink></li>
                              </> : 
-                             <> <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
+                             <> <li><Link><FaHome></FaHome> User Home</Link></li>
                              {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
-                             <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
+                             <li><NavLink to="/dashboard/paymentHistory"><FaWallet></FaWallet> Payment History</NavLink></li>
                              <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Enrolled Classes</NavLink></li>
                              <li>
                                  <NavLink to="/dashboard/myclasses"><FaShoppingCart></FaShoppingCart> My selecting Classes
