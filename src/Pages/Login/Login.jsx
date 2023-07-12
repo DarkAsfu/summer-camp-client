@@ -34,7 +34,7 @@ const Login = () => {
             })
     }
     return (
-        <div className=''>
+        <div className='pt-20'>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content grid grid-cols-1 md:grid-cols-2 py-20">
                     <div className="text-center px-14">

@@ -5,7 +5,8 @@ const PopularInstruction = () => {
     const [populaIns] = usePopularInstructor();
     return (
         <div>
-            <h1 className="text-4xl text-center mt-8">Popular Instruction</h1>
+            {/* <h1 className="text-4xl text-center mt-8">Popular Instruction</h1> */}
+            <h2 className='text-4xl font-bold text-center pt-20'><span className='bg-blue-600 rounded-full px-3 py-1.5 text-white'>P</span>opular Instruction</h2>
         <div className="grid md:grid-cols-3 gap-8 px-4 md:px-10 py-10">
             {
                 populaIns.slice(0, 6).map(instructor =>
@@ -16,7 +17,7 @@ const PopularInstruction = () => {
                             <h2 className="card-title">{instructor.instructor_name}</h2>
                             <p>{instructor?.class_taught}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn">Buy Now</button>
+                                <button className="btn bg-blue-700 text-white border-0">Buy Now</button>
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ const Instructor = () => {
     }
 
     return (
-        <div>
+        <div className="mt-20">
             <Swiper
                 slidesPerView={1}
                 breakpoints={{
