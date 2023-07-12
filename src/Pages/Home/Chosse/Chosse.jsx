@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faNetworkWired, faPlay, faHeadset, faFileSignature, faMoneyBillWave, faClockRotateLeft, faTags } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faNetworkWired, faPlay, faHeadset } from '@fortawesome/free-solid-svg-icons'
 /**
  * 
  * className="text-slate-100 w-24 h-24 object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
